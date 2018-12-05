@@ -5,38 +5,20 @@
 </head>
 <body style="background-color: rgb(255, 255, 255)">
     <p>The button below will switch background color!</p>
-    <button onclick="darker()">Switch color</button>
+    <button onclick="theme()">Switch color</button>
     <a href="index2.html">next</a>
     
     
     <script>
-    
-    document.body.style.backgroundColor = sessionStorage.getItem('bg');
-document.body.style.color = sessionStorage.getItem('cc');
-function darker() {
-     if ( sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
-         
-            sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
-            sessionStorage.setItem('cc', '#777');
-            
-         
-     }
-    else if (sessionStorage.getItem('bg') == null || undefined) {
-        sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
-        sessionStorage.setItem('cc', '#777');
-        
-    }
-    else if( sessionStorage.getItem('bg') === 'rgb(6, 23, 37)') {
-        
-        sessionStorage.setItem('bg', 'rgb(255, 255, 255)');
-        sessionStorage.setItem('cc', '#333');
-        
-  
-    }
-
-document.body.style.backgroundColor = sessionStorage.getItem('bg');
-document.body.style.color = sessionStorage.getItem('cc');
-
+    document.body.style.backgroundColor = sessionStorage.getItem("bg");
+document.body.style.color = sessionStorage.getItem("cc");
+function theme() {
+    "rgb(255, 255, 255)" === sessionStorage.getItem("bg") ? (sessionStorage.setItem("bg", "rgb(6, 23, 37)"),
+    sessionStorage.setItem("cc", "#777")) : null == sessionStorage.getItem("bg") ? (sessionStorage.setItem("bg", "rgb(6, 23, 37)"),
+    sessionStorage.setItem("cc", "#777")) : "rgb(6, 23, 37)" === sessionStorage.getItem("bg") && (sessionStorage.setItem("bg", "rgb(255, 255, 255)"),
+    sessionStorage.setItem("cc", "#333"));
+    document.body.style.backgroundColor = sessionStorage.getItem("bg");
+    document.body.style.color = sessionStorage.getItem("cc")
 }
     </script>
     
