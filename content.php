@@ -1,1 +1,1 @@
-echo file_get_contents($_GET['url']);
+<?php echo file_get_contents($_GET['url']); ?>
