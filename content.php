@@ -1,1 +1,2 @@
-echo file_get_contents($_GET['url']);
+$homepage = file_get_contents('http://www.google.com');
+echo $homepage;
