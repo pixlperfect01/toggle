@@ -1,6 +1,6 @@
 <html lang="en">
-    <head></head>
-    <body><iframe src="content.php?url=http://google.com"></iframe>
+    <head><? $content = file_get_contents('http://bing.com'); ?></head>
+    <body><div hidden><?php echo $content ?></div>
     
 </body>
 </html>
